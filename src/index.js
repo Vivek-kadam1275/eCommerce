@@ -10,12 +10,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <BrowserRouter basename='eCommerce'>
+
     <Provider store={Store}>
-        <BrowserRouter basename='eCommerce'>
             <App />
-        </BrowserRouter>
     </Provider>
 
+    </BrowserRouter>
 
 );
 
