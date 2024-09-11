@@ -26,7 +26,7 @@ const Home = (props) => {
  },[])
   return (
     <div>
-      {loading? (<div className="spinner"></div>):(
+      {loading? (<div className="  w-screen h-screen items-center  flex justify-center"><div className="spinner "></div></div>):(
         <div className="flex flex-wrap w-10/12 max-w-[1080px] mx-auto gap-4 justify-center">
           {products.map((product)=>(
             <Product product={product} key={product.id}/>

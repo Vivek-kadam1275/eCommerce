@@ -13,7 +13,7 @@ const Product = ({ product }) => {
       <div className="font-bold">
         {product.title.length > 17 ?
           <div>{product.title.substring(0, 17)}... </div> :
-          <div>{product.title}</div>}
+          <div >{product.title}</div>}
       </div>
       <div className="">
         {product.description.length > 51 ?
@@ -32,11 +32,11 @@ const Product = ({ product }) => {
           {cart.some((item) => (item.id == product.id)) ? (
             <button onClick={() => {
               dispatch(remove(product.id))
-            }}>Remove Item</button>
+            }} className="hover:font-bold">Remove Item</button>
           ) : (
             <button onClick={() => {
               dispatch(add(product))
-            }}>Add to Cart</button>
+            }} className="hover:font-bold">Add to Cart</button>
           )
           }
 
